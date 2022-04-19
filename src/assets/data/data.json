@@ -1,0 +1,124 @@
+{
+  "schedule": [
+    {
+      "date": "2047-05-17",
+      "groups": [
+        {
+          "time": "8:00 am",
+          "sessions": [
+            {
+              "name": "Cruda",
+              "timeStart": "8:00 am",
+              "timeEnd": "9:00 am",
+              "location": "CERVE",
+              "tracks": [
+                "Food"
+              ],
+              "id": "1"
+            }
+          ]
+        },
+        {
+          "time": "9:15 am",
+          "sessions": [
+            {
+              "name": "Ir a la c19",
+              "location": "c19 cantera",
+              "description": "Ponernos astral",
+              "speakerNames": [
+                "Felix"
+              ],
+              "timeStart": "6:30 pm",
+              "timeEnd": "5:00 am",
+              "tracks": [
+                "Ionic"
+              ],
+              "id": "2"
+            },
+            {
+              "name": "Romper tabla rocas",
+              "location": "casa del Felix",
+              "description": "Aventarse bien pedo encima de la tablaroca a las 3 am",
+              "speakerNames": [
+                "Abraham Luna"
+              ],
+              "timeStart": "2:45 am",
+              "timeEnd": "4:00 am",
+              "tracks": [
+                "Tooling"
+              ],
+              "id": "3"
+            },
+            {
+              "name": "Ir a misa",
+              "location": "nose",
+              "description": "Decir que no sabia que dia era pero se habia quedado dormido",
+              "speakerNames": [
+                "Sotito"
+              ],
+              "timeStart": "9:15 am",
+              "timeEnd": "9:30 am",
+              "tracks": [
+                "Ionic"
+              ],
+              "id": "4"
+            }
+          ]
+        }
+        
+      ]
+    }
+  ],
+  "speakers": [
+    {
+      "name": "Burt Bear",
+      "profilePic": "/assets/img/speakers/bear.jpg",
+      "instagram": "ionicframework",
+      "twitter": "ionicframework",
+      "about": "Burt is a Bear. Burt's interests include poetry, dashing space heroes, and lions.",
+      "title": "Software Engineer",
+      "location": "Everywhere",
+      "email": "burt@example.com",
+      "phone": "+1-541-754-3010",
+      "id": "1"
+    },
+    {
+      "name": "Charlie Cheetah",
+      "profilePic": "/assets/img/speakers/cheetah.jpg",
+      "instagram": "ionicframework",
+      "twitter": "ionicframework",
+      "about": "Charlie is a Cheetah. Charlie's interests include country music, plush animals, pyrotechnics, and skeletons.",
+      "title": "Software Engineer",
+      "location": "Everywhere",
+      "email": "charlie@example.com",
+      "phone": "+1-541-754-3010",
+      "id": "2"
+    },
+    {
+      "name": "Donald Duck",
+      "profilePic": "/assets/img/speakers/duck.jpg",
+      "instagram": "ionicframework",
+      "twitter": "ionicframework",
+      "about": "Donald is a Duck. Donald's interests include carpentry, superheroes, merpeople, and glam rock.",
+      "title": "Software Engineer",
+      "location": "Everywhere",
+      "email": "donald@example.com",
+      "phone": "+1-541-754-3010",
+      "id": "3"
+    },
+    {
+      "name": "Eva Eagle",
+      "profilePic": "/assets/img/speakers/eagle.jpg",
+      "instagram": "ionicframework",
+      "twitter": "ionicframework",
+      "about": "Eva is an Eagle. Eva's interests include ants, seashells, and cupcakes.",
+      "title": "Developer Advocate",
+      "location": "Everywhere",
+      "email": "eva@example.com",
+      "phone": "+1-541-754-3010",
+      "id": "4"
+    }
+   
+    
+  ]
+}
