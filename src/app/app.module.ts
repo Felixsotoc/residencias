@@ -1,4 +1,3 @@
-import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
@@ -13,6 +12,11 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { FormsModule } from '@angular/forms';
 
+//para lo del pdf
+import { HttpClientModule } from '@angular/common/http';
+import { FileOpener } from '@ionic-native/file-opener/ngx';
+
+
 @NgModule({
   imports: [
     BrowserModule,
@@ -26,7 +30,7 @@ import { FormsModule } from '@angular/forms';
     })
   ],
   declarations: [AppComponent],
-  providers: [InAppBrowser, SplashScreen, StatusBar],
+  providers: [InAppBrowser, SplashScreen, StatusBar, FileOpener],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

@@ -5,8 +5,12 @@ import { CheckTutorial } from './providers/check-tutorial.service';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: '/login',
+    redirectTo: '/agenda',
     pathMatch: 'full'
+  },
+  {
+    path: 'agenda',
+    loadChildren: () => import('./pages/schedule/schedule.module').then(m => m.ScheduleModule)
   },
   {
     path: 'account',
@@ -23,6 +27,10 @@ const routes: Routes = [
   {
     path: 'signup',
     loadChildren: () => import('./pages/signup/signup.module').then(m => m.SignUpModule)
+  },
+  {
+    path: 'Poliza',
+    loadChildren: () => import('./pages/polizas/polizas').then(m => m.PolizaPage)
   },
   {
     path: 'app',

@@ -12,3 +12,8 @@ if (environment.production) {
 
 platformBrowserDynamic().bootstrapModule(AppModule)
   .catch(err => console.log(err));
+
+
+  //sirve para el pdf
+  import { defineCustomElements } from '@ionic/pwa-elements/loader';
+  defineCustomElements(window);

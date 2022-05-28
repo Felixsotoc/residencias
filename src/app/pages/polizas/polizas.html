@@ -1,25 +1,170 @@
 <ion-header>
-    <ion-toolbar>
-      <ion-buttons slot="start">
-        <ion-menu-button></ion-menu-button>
-      </ion-buttons>
-      <ion-title>Tesoreria</ion-title>
-    </ion-toolbar>
-  </ion-header>
- 
- 
- <!--<ion-body>
-    <ion-list inset>
-        <ion-item (click)="Tesoreria">Update Picture</ion-item>
-        <ion-item (click)="Tesoreria">Change Username</ion-item>
-        <ion-item (click)="Tesoreria">Change Password</ion-item>
-        <ion-item (click)="Tesoreria">Support</ion-item>
-        <ion-item (click)="Tesoreria">Logout</ion-item>
-      </ion-list>
-  </ion-body>
---> 
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Tesoreria</ion-title>
 
 
 
+  </ion-toolbar>
+  <script src="polizas.js"></script>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <form  [formGroup]="myForm">
+
+    <!--<ion-item>
+      <ion-label> Include Logo de la empre</ion-label>
+      <ion-checkbox formControlName="showLogo" slot="start"></ion-checkbox>
+    </ion-item>
+  -->
+  <br>
+  <br>
+  <ion-item>
+    <h4 >Formulario para poliza mensual</h4>
+  </ion-item>
+<br>
+<br>
+<br>
+
+<ion-item>
+  <ion-label position="stacked">NOMBRE DEL DOCUMENTO PDF</ion-label>
+  <ion-input formControlName="f27"></ion-input>
+</ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">MES</ion-label>
+      <ion-input formControlName="f3"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">POLIZA DE INGRESOS No.</ion-label>
+      <ion-input formControlName="f4"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">SALDO INICIAL</ion-label>
+      <ion-input formControlName="f5"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">INGRESOS ACTIVIDADES</ion-label>
+      <ion-input formControlName="f6"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">INGRESOS DONATIVOS O APORTACIONES</ion-label>
+      <ion-input formControlName="f7"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">INGRESOS INTERESES</ion-label>
+      <ion-input formControlName="f8"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">INGRESOS OTROS</ion-label>
+      <ion-input formControlName="f9"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">TOTAL DE INGRESOS</ion-label>
+      <ion-input formControlName="f10"></ion-input>
+    </ion-item>
+<!-- POLIZA DE EGRESOS  -->
+    <ion-item>
+      <ion-label position="stacked">POLIZA DE EGRESOS No.</ion-label>
+      <ion-input formControlName="f11"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">EGRESOS PAPELERIA</ion-label>
+      <ion-input formControlName="f12"></ion-input>
+    </ion-item>
+
+
+    <ion-item>
+      <ion-label position="stacked">EGRESOS MANTENIMIENTO DE EQUIPO</ion-label>
+      <ion-input formControlName="f13"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">EGRESOS MANTENIMIENTO DE EDIFICIO</ion-label>
+      <ion-input formControlName="f14"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">EGRESOS MATERIAL DIDACTICO</ion-label>
+      <ion-input formControlName="f15"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">EGRESOS ASPECTO DEPORTIVO Y CULTURAL</ion-label>
+      <ion-input formControlName="f16"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">EGRESOS ARTICULOS DE ASEO</ion-label>
+      <ion-input formControlName="f17"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">EGRESOS SERVICIOS</ion-label>
+      <ion-input formControlName="f18"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">EGRESOS ACTIVIDADES</ion-label>
+      <ion-input formControlName="f19"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">EGRESOS ACCION SOCIAL</ion-label>
+      <ion-input formControlName="f20"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">EGRESOS OTROS</ion-label>
+      <ion-input formControlName="f21"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">TOTAL DE EGRESOS</ion-label>
+      <ion-input formControlName="f22"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">SALDO FINAL</ion-label>
+      <ion-input formControlName="f26"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">LOCALIDAD DE PROCEDENCIA</ion-label>
+      <ion-input formControlName="f23"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">DIA </ion-label>
+      <ion-input formControlName="f24"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">AÑO(ultimos 2 digitos) </ion-label>
+      <ion-input formControlName="f25"></ion-input>
+    </ion-item>
 
   
+
+    <ion-item>
+    </ion-item>
+ <!-- <ion-button expand="full" type="submit">Crear PDF</ion-button> --> 
+
+  </form>
+
+ <!--
+<ion-button expand="full" (click)="descargarPDF()" color="secondary" >Descargar PDF</ion-button>
+-->
+<ion-button expand="block" (click)="DescargarPdf()" shape="round"  color="secondary" >Descargar formato PDF</ion-button>
+
+</ion-content>

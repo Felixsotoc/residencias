@@ -40,15 +40,7 @@ const routes: Routes = [
           }
         ]
       },
-      {
-        path: 'map',
-        children: [
-          {
-            path: '',
-            loadChildren: () => import('../map/map.module').then(m => m.MapModule)
-          }
-        ]
-      },
+ 
       {
         path: 'polizas',
         children: [
