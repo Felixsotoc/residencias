@@ -10,7 +10,7 @@ const routes: Routes = [
     path: 'tabs',
     component: TabsPage,
     children: [
-      {
+     /* {
         path: 'schedule',
         children: [
           {
@@ -22,7 +22,7 @@ const routes: Routes = [
             loadChildren: () => import('../session-detail/session-detail.module').then(m => m.SessionDetailModule)
           }
         ]
-      },
+      },*/
       {
         path: 'speakers',
         children: [
@@ -51,6 +51,15 @@ const routes: Routes = [
         ]
       },
       {
+        path: 'agenda',
+        children: [
+          {
+           path: '',
+           loadChildren: () => import('../agenda/agenda.module').then(m => m.AgendaPageModule)
+          }
+        ]
+      },
+      {
         path: 'about',
         children: [
           {
@@ -61,7 +70,7 @@ const routes: Routes = [
       },
       {
         path: '',
-        redirectTo: '/app/tabs/schedule',
+        redirectTo: '/app/tabs/agenda',
         pathMatch: 'full'
       }
     ]

@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-toolbar >
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Agenda</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <br>
+
+<ion-row>
+  <ion-col size="2">
+<ion-button fill="clear" (click)="back()">
+  <ion-icon name="arrow-back" slot="icon-only"></ion-icon>
+</ion-button>
+  </ion-col>
+
+  <ion-col size="8" class="ion-text-center">
+    <h2>Mes</h2>
+  </ion-col>
+
+  <ion-col size="2">
+    <ion-button fill="clear" (click)="back()">
+      <ion-icon name="arrow-foward" slot="icon-only"></ion-icon>
+    </ion-button>
+      </ion-col>
+
+</ion-row>
+
+  <calendar
+  id="myCal"
+  [eventSource]="allEvents"
+  [calendarMode]="calendar.mode"
+  startHours="0"
+  noEventlabel="Ningun evento para mostrar"
+  endHours="23"
+  [step]="30"
+  startingDayWeek="1"
+  [currentDate]="calendar.currentDate"
+  (onTitleChanged)="onViewTitleChanged($event)"
+  (onEventSelected)="onEventSelected($event)"
+ [timeInterval]="30"
+
+  
+  >
+  
+</calendar>
+</ion-content>

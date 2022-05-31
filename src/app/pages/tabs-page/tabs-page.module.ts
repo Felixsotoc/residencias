@@ -12,6 +12,7 @@ import { SessionDetailModule } from '../session-detail/session-detail.module';
 import { SpeakerDetailModule } from '../speaker-detail/speaker-detail.module';
 import { SpeakerListModule } from '../speaker-list/speaker-list.module';
 import { PolizaModule } from '../polizas/polizas.module'; 
+import { AgendaPageModule } from '../agenda/agenda.module';
 @NgModule({
   imports: [
     AboutModule,
@@ -23,6 +24,7 @@ import { PolizaModule } from '../polizas/polizas.module';
     SpeakerDetailModule,
     SpeakerListModule,
     TabsPageRoutingModule,
+    AgendaPageModule,
     PolizaModule,
     ],
   declarations: [

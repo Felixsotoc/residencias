@@ -21,7 +21,7 @@ export class AppComponent implements OnInit {
   appPages = [
     {
       title: 'Agenda',
-      url: '/app/tabs/schedule',
+      url: '/app/tabs/agenda',
       icon: 'calendar'
     },
     {

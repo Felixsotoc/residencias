@@ -8,10 +8,7 @@ const routes: Routes = [
     redirectTo: '/agenda',
     pathMatch: 'full'
   },
-  {
-    path: 'agenda',
-    loadChildren: () => import('./pages/schedule/schedule.module').then(m => m.ScheduleModule)
-  },
+
   {
     path: 'account',
     loadChildren: () => import('./pages/account/account.module').then(m => m.AccountModule)
@@ -35,6 +32,11 @@ const routes: Routes = [
   {
     path: 'app',
     loadChildren: () => import('./pages/tabs-page/tabs-page.module').then(m => m.TabsModule)
+  },
+
+  {
+    path: 'agenda',
+    loadChildren: () => import('./pages/agenda/agenda.module').then( m => m.AgendaPageModule)
   },
   
 ];
