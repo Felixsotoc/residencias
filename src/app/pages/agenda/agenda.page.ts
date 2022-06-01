@@ -16,10 +16,13 @@ export class AgendaPage implements OnInit {
 
   allEvents = [];
   currentMonth: string;
+  //fecha actual
+  myDate: String = new Date().toISOString();
+
   calendar = {
     mode: 'month' as CalendarMode,
-    currentDate: new Date(2022, 5, 30)
-   // locale:'en-US'
+    currentDate: new Date(),
+    // locale:'en-US'
   }
   newEvent = {
     title: '',
@@ -27,13 +30,15 @@ export class AgendaPage implements OnInit {
     startTime: '',
     endTime: '',
 
+
+
   }
 
-  showAddEvent:boolean;
+  showAddEvent: boolean;
 
   @ViewChild(CalendarComponent)
   myCal: CalendarComponent;
-
+/*
   myData = [
     {
       title: "Mi cumple",
@@ -42,13 +47,42 @@ export class AgendaPage implements OnInit {
       endTime: new Date(2022, 4, 28, 1, 11, 11),
 
     }
-  ];
+  ];*/
 
-  constructor(public modalController: ModalController) { }
+  constructor(public modalController: ModalController) {
+
+
+    this.allEvents = JSON.parse(localStorage.getItem("eventos"));
+    const localEventos = JSON.parse(localStorage.getItem("eventos"));
+    if (localEventos == undefined || localEventos == null) {
+      this.allEvents = [];
+
+    }
+    else {
+      this.allEvents=[]
+      localEventos.forEach(evento => {
+
+        this.allEvents.push({
+
+          title: evento.title,
+          description: evento.description,
+          startTime: new Date(evento.startTime),
+          endTime: new Date(evento.endTime)
+        })
+      })
+      console.log(this.allEvents);
+    }
+
+
+  }
 
   ngOnInit() {
 
-    this.allEvents = this.myData;
+
+
+
+
+
   }
   onViewTitleChanged(title: string) {
     this.currentMonth = title;
@@ -57,7 +91,7 @@ export class AgendaPage implements OnInit {
 
   async onEventSelected(ev) {
     this.newEvent = ev;
-    const modal= await this.modalController.create({
+    const modal = await this.modalController.create({
       component: EventosPage,
       componentProps: ev
     });
@@ -72,29 +106,41 @@ export class AgendaPage implements OnInit {
   next() {
     this.myCal.slideNext();
   }
-  showHideForm(){
- this.showAddEvent= !this.showAddEvent;
- this.newEvent={
-   title:'',
-   description:'',
-   startTime: new Date().toISOString(),
-   endTime:new Date().toISOString(),
- }
+  showHideForm() {
+    this.showAddEvent = !this.showAddEvent;
+    this.newEvent = {
+      title: '',
+      description: '',
+      startTime: new Date().toISOString(),
+      endTime: new Date().toISOString(),
+    }
   }
-  today(){
-    this.calendar.currentDate= new Date (2022,5,31);
+  today() {
+    this.calendar.currentDate = new Date();
   }
-  changeMode(mode){
-    this.calendar.mode=mode;
+  changeMode(mode) {
+    this.calendar.mode = mode;
   }
-  addEvent(){
-    this.allEvents.push({
-      title:this.newEvent.title,
-      description:this.newEvent.description,
-      startTime:this.newEvent.startTime,
-      endTime:this.newEvent.endTime,
+  close() {
+    this.modalController.dismiss();
+  }
+  //prueba
+  eventStartTime() {
 
+  }
+
+  addEvent() {
+    this.allEvents.push({
+      title: this.newEvent.title,
+      description: this.newEvent.description,
+      startTime: new Date(this.newEvent.startTime),
+      endTime: new Date(this.newEvent.endTime),
     })
+    this.showAddEvent = !this.showAddEvent
+    localStorage.setItem("eventos", JSON.stringify(this.allEvents))
+  //  this.myData = JSON.parse(localStorage.getItem("eventos"))
+
+
   }
 
 }

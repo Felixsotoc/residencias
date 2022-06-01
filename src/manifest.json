@@ -4,13 +4,6 @@
   "short_name": "Eduapp",
   "start_url": "/src/app/pages/agenda",
   "display": "standalone",
-  "icons": [
-    {
-      "src": "assets/img/polizaimg/jardin.png",
-      "sizes": "512x512",
-      "type": "image/png"
-    }
-  ],
   "background_color": "#87B1F9",
   "theme_color": "#87B1F9"
 }
