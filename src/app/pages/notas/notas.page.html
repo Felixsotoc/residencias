@@ -1,0 +1,73 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Notas</ion-title>
+  </ion-toolbar>
+
+
+
+  <ion-toolbar color="danger">
+    <ion-buttons slot="start">
+      <ion-title>Todas las notas</ion-title>
+
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <div *ngIf="showAddEvent">
+    <ion-item>
+      <ion-label><b>Nota</b></ion-label>
+      <ion-input type="text" placeholder="agrega una nota" [(ngModel)]="inputnota">
+      </ion-input>
+    </ion-item>
+    <ion-button color="danger" expand="block" (click)="addNota()">Agrega un evento</ion-button>
+
+  </div>
+
+ <ion-list>
+
+   <ion-item
+   *ngFor= "let nota of allEvents; index as index"
+
+   >
+     <ion-label>{{nota.description}}</ion-label>
+     <ion-icon (click)="eliminarnota(index)" name="close"></ion-icon>
+
+   </ion-item>
+ </ion-list>
+
+
+
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="showHideForm()">
+ <ion-icon *ngIf="!showAddEvent" name="add"></ion-icon>
+ <ion-icon *ngIf="showAddEvent" name="close"></ion-icon>
+ 
+ </ion-fab-button>
+  </ion-fab>
+
+
+
+
+<!--
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="addEvent()">
+      <ion-icon name="add"></ion-icon>
+
+    </ion-fab-button>
+  </ion-fab>
+-->
+
+
+
+</ion-content>

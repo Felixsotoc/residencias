@@ -125,9 +125,7 @@ export class AgendaPage implements OnInit {
     this.modalController.dismiss();
   }
   //prueba
-  eventStartTime() {
-
-  }
+ 
 
   addEvent() {
     this.allEvents.push({

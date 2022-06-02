@@ -60,6 +60,15 @@ const routes: Routes = [
         ]
       },
       {
+        path: 'notas',
+        children: [
+          {
+           path: '',
+           loadChildren: () => import('../notas/notas.module').then(m => m.NotasPageModule)
+          }
+        ]
+      },
+      {
         path: 'about',
         children: [
           {
